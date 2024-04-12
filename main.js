@@ -29,9 +29,21 @@ btnAdoptions.addEventListener("click", function (e) {
 btnCloseAdoptions.addEventListener("click", function (e) {
   e.preventDefault();
   modalAdoptions.classList.remove("modal--show");
+  resetModalContent();
 });
 
 closeAdoptions.addEventListener("click", function (e) {
   e.preventDefault();
   modalAdoptions.classList.remove("modal--show");
+  resetModalContent();
 });
+
+// Reseteando el formulario
+const btnCloseModal = document.querySelector(".modal__close__global");
+const btnSend = document.querySelector(".modal__close__adoptions");
+
+function resetModalContent() {
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+}
